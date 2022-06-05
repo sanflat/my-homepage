@@ -4,6 +4,7 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { ReactNode } from 'react';
 import { Box } from '@chakra-ui/react'
+import { useColorModeValue } from '@chakra-ui/react'
 
 type Props = {
     children?: ReactNode;
@@ -12,11 +13,13 @@ type Props = {
 const Layout = ({ children }: Props) => {
     return (
         <>
-            <Header />
+            <Box pt='2rem' bg={useColorModeValue('white', 'black')}>
+                <Header />
 
-            <Box>{children}</Box>
+                <Box>{children}</Box>
 
-            <Footer />
+                <Footer />
+            </Box>
         </>
     );
 };

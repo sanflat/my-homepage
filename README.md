@@ -11,8 +11,8 @@
 $ docker-compose build
 // Next.Js(Typescript) Setup
 $ docker-compose run --rm next yarn create next-app . --typescript
-// Chakra Package and Icons & framer-motion Install
-$ docker-compose run --rm next yarn add -D @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^6 @chakra-ui/icons
+// Chakra Package & Chakra/React Icons & framer-motion Install
+$ docker-compose run --rm next yarn add -D @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^6 @chakra-ui/icons react-icons
 $ docker-compose up
 ```
 
