@@ -1,2 +1,3 @@
 # root ignore
 .idea/
+.DS_Store

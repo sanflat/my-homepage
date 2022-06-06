@@ -1,159 +1,145 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import NextLink from 'next/link'
-import { Section } from '../components/section'
-import { Card } from '../components/card'
-import { Image, LinkOverlay, LinkBox, useColorModeValue, Box, Heading, Text, HStack, Button, Center, Badge, SimpleGrid, Divider } from '@chakra-ui/react'
-import { IconContext } from 'react-icons'
+import Link from 'next/link'
+import { Image, useColorModeValue, Box, Heading, Text, HStack, Button, Center } from '@chakra-ui/react'
 import { IoLogoGithub, IoLogoInstagram } from 'react-icons/io5'
 import { AiFillMediumCircle } from 'react-icons/Ai'
 import { SiQiita } from 'react-icons/Si'
-import { motion, useAnimation,whileHover,onHoverStart,onHoverEnd } from "framer-motion"
+import { motion } from "framer-motion"
 
 const Home: NextPage = () => {
 
   return (
      <>
-          <Head>
-            <title>YOHEY KANO - HomePage</title>
-            <link rel="icon" href="/favicon.ico" />
-          </Head>
-          <Image m='0 auto' h='150' w='150' mb='1rem' src='/character.png' />
-          <Box
-            borderRadius="lg"
-            mb={6}
-            p={3}
-            textAlign="center"
-            bg={useColorModeValue('blackAlpha.200', 'whiteAlpha.200')}
-          >
-               Hello, I'm Web developer based in Japan!
-          </Box>
-          <Card />
-          <Box
-            pt='3rem'
-            m='0 auto'
-          >
-            <Heading as="h3" fontSize={20} mb={4} textAlign="center" >
-               Portfolio
-            </Heading>
-            <SimpleGrid columns={[1, 1, 2]} gap={6}>
-                  <Box w="100%" textAlign="center">
-                    <NextLink href={`/works/1`} passHref scroll={false}>
-                      <LinkBox cursor="pointer">
+        <Head>
+          <title>YOHEY KANO - HomePage</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <Box mb='1rem'>
+            <Center>
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <Image h='150' w='150' src='/character.png' />
+                </motion.div>
+            </Center>
+        </Box>
+        <Box mb='1.5rem' >
+            <Center>
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 1 }}
+                >
+                    <Box
+                      borderRadius="lg"
+                      mb={6}
+                      p={3}
+                      w='500px'
+                      bg={useColorModeValue('blackAlpha.200', 'whiteAlpha.200')}
+                      textAlign='center'
+                    >
+                         Hello, I'm Web developer based in Japan!
+                    </Box>
+                </motion.div>
+            </Center>
+        </Box>
+        <Box>
+            <Center>
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 1 }}
+                >
+                    <HStack spacing={10} ml={4}>
                         <Image
-                          src='/character.png'
-                          alt='title'
-                          className="grid-item-thumbnail"
-                          placeholder="blur"
+                          borderRadius='30'
+                          h='100'
+                          w='100'
+                          src='/my.jpg'
                         />
-                        <LinkOverlay href={`/works/1`}>
-                          <Text mt={2} fontSize={20}>
-                            title
-                          </Text>
-                        </LinkOverlay>
-                        <Text fontSize={14}>children</Text>
-                      </LinkBox>
-                    </NextLink>
-                  </Box>
-                  <Box w="100%" textAlign="center">
-                    <NextLink href={} passHref scroll={false}>
-                      <LinkBox cursor="pointer">
-                        <Image
-                          src='/character.png'
-                          alt='title'
-                          placeholder="blur"
-                        />
-                        <LinkOverlay href={}>
-                          <Text mt={2} fontSize={20}>
-                            title
-                          </Text>
-                        </LinkOverlay>
-                        <Text fontSize={14}>children</Text>
-                      </LinkBox>
-                    </NextLink>
-                  </Box>
-            </SimpleGrid>
-          </Box>
-          <Box
-            pt='3rem'
-            m='0 auto'
-            textAlign="center"
-          >
-            <Heading as="h3" fontSize={20} mb={4} textAlign="center" >
-               Work Concept
-            </Heading>
-            <Text pt='1rem'>
-                ”誠実さ”と”学ぶ姿勢”を重視して働いています。<br />
-                <br />
-                「若いからこそ、謙虚さとハングリー精神を備え持つ事が大事」<br />
-                <br />
-                「自分に足りない部分を認め、素早く学ぶ」<br />
-                <br />
-                「今持っている能力が数年後通用するかどうかわからない。だからこそ常に勉強し、ビジネスで結果をだしていく」<br />
-                <br />
-                今日の自分より、明日の自分がより良くなるように、仕事をしています。
-            </Text>
-          </Box>
-          <Box
-            pt='3rem'
-            m='0 auto'
-            textAlign="center"
-          >
-            <Heading as="h3" fontSize={20} mb={4} textAlign="center" >
-               Posts
-            </Heading>
-            <SimpleGrid columns={[1, 1, 2]} gap={6}>
-                  <Box w="100%" textAlign="center">
-                    <NextLink href={`/works/1`} passHref scroll={false}>
-                      <LinkBox cursor="pointer">
-                        <Image
-                          src='/character.png'
-                          alt='title'
-                          className="grid-item-thumbnail"
-                          placeholder="blur"
-                        />
-                        <LinkOverlay href={`/works/1`}>
-                          <Text mt={2} fontSize={20}>
-                            title
-                          </Text>
-                        </LinkOverlay>
-                        <Text fontSize={14}>children</Text>
-                      </LinkBox>
-                    </NextLink>
-                  </Box>
-                  <Box w="100%" textAlign="center">
-                    <NextLink href={`/works/1`} passHref scroll={false}>
-                      <LinkBox cursor="pointer">
-                        <Image
-                          src='/character.png'
-                          alt='title'
-                          className="grid-item-thumbnail"
-                          placeholder="blur"
-                        />
-                        <LinkOverlay href={`/works/1`}>
-                          <Text mt={2} fontSize={20}>
-                            title
-                          </Text>
-                        </LinkOverlay>
-                        <Text fontSize={14}>children</Text>
-                      </LinkBox>
-                    </NextLink>
-                  </Box>
-              </SimpleGrid>
-          </Box>
-          <Box
-                pt='3rem'
-                m='0 auto'
-                textAlign="center"
-              >
-                <Heading as="h3" fontSize={20} mb={4} textAlign="center" >
-                   I Love
-                </Heading>
-                <Text pt='1rem'>
-                  プライベート：コーヒー＆音楽・本・アニメ/映画・ビジネス・ゲーム・料理<br />
-                  エンジニア：Daisuke Katsura. Kentaro Okada. Takuya Matsuyama. <br />
-                </Text>
-          </Box>
+                        <Box textAlign='left'>
+                            <Heading mb={4} size='md'>YOHEY KANO</Heading>
+                            <Text fontSize='xl'>
+                              Freelance Engineer and HeisaN LLC CEO
+                            </Text>
+                       </Box>
+                    </HStack>
+                </motion.div>
+            </Center>
+            <Center pt='3rem'>
+                <HStack spacing={5} ml={4}>
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 1 }}
+                    >
+                        <Link href="https://github.com/sanflat">
+                            <a>
+                                <Button
+                                  h='50px'
+                                  w='50px'
+                                  borderRadius='30'
+                                >
+                                    <IoLogoGithub/>
+                                </Button>
+                            </a>
+                        </Link>
+                    </motion.div>
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 1 }}
+                    >
+                        <Link href="https://www.instagram.com/hey9roz">
+                            <a>
+                                <Button
+                                  h='50px'
+                                  w='50px'
+                                  borderRadius='30'
+                                >
+                                    <IoLogoInstagram/>
+                                </Button>
+                            </a>
+                        </Link>
+                    </motion.div>
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 1 }}
+                    >
+                        <Link href="https://medium.com/@hey9roz">
+                            <a>
+                                <Button
+                                  h='50px'
+                                  w='50px'
+                                  borderRadius='30'
+                                >
+                                    <AiFillMediumCircle/>
+                                </Button>
+                            </a>
+                        </Link>
+                    </motion.div>
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 1 }}
+                    >
+                        <Link href="https://qiita.com/pooh-hey">
+                            <a>
+                                <Button
+                                  h='50px'
+                                  w='50px'
+                                  borderRadius='30'
+                                >
+                                    <SiQiita/>
+                                </Button>
+                            </a>
+                        </Link>
+                    </motion.div>
+                </HStack>
+            </Center>
+        </Box>
+        <Box pt='10rem'>
+            <Center>
+                <Heading size='md'>...Developing</Heading>
+            </Center>
+        </Box>
      </>
   )
 }
