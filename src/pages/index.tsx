@@ -37,7 +37,7 @@ const Home: NextPage = () => {
                       bg={useColorModeValue('blackAlpha.200', 'whiteAlpha.200')}
                       textAlign='center'
                     >
-                         Hello, I'm Web developer based in Japan!
+                         Hello, I&apos;m Web developer based in Japan!
                     </Box>
                 </motion.div>
             </Center>
