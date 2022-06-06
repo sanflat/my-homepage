@@ -2,8 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import { Image, useColorModeValue, Box, Heading, Text, HStack, Button, Center } from '@chakra-ui/react'
-import { IoLogoGithub, IoLogoInstagram } from 'react-icons/io5'
-import { AiFillMediumCircle } from 'react-icons/Ai'
+import { IoLogoGithub, IoLogoInstagram, IoLogoMedium } from 'react-icons/io5'
 import { SiQiita } from 'react-icons/Si'
 import { motion } from "framer-motion"
 
@@ -111,7 +110,7 @@ const Home: NextPage = () => {
                                   w='50px'
                                   borderRadius='30'
                                 >
-                                    <AiFillMediumCircle/>
+                                    <IoLogoMedium/>
                                 </Button>
                             </a>
                         </Link>
