@@ -143,7 +143,7 @@ const Home: NextPage = () => {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 1 }}
                 >
-                    <Link href={`https://blog-sample-rose.vercel.app`} passHref scroll={false}>
+                    <Link href={`https://github.com/sanflat/blog-sample`} passHref scroll={false}>
                       <LinkBox cursor="pointer">
                         <Center>
                             <Image
@@ -152,7 +152,7 @@ const Home: NextPage = () => {
                               borderRadius='10px'
                             />
                         </Center>
-                        <LinkOverlay href={`https://blog-sample-rose.vercel.app`}>
+                        <LinkOverlay href={`https://github.com/sanflat/blog-sample`}>
                           <Text mt={2} fontSize={20}>
                             blog-sample
                           </Text>
