@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import { Image, useColorModeValue, Box, Heading, Text, HStack, Button, Center } from '@chakra-ui/react'
+import { Image, useColorModeValue, Box, Heading, Text, HStack, Button, Center, Divider, SimpleGrid, LinkBox,LinkOverlay } from '@chakra-ui/react'
 import { IoLogoGithub, IoLogoInstagram, IoLogoMedium } from 'react-icons/io5'
 import { motion } from "framer-motion"
 
@@ -132,6 +132,37 @@ const Home: NextPage = () => {
                     </motion.div>
                 </HStack>
             </Center>
+        </Box>
+        <Box pt='3rem'>
+            <Center>
+                <Heading size='md' borderRight='1px gray solid' borderLeft='1px gray solid' borderRadius='10px' padding='0.3rem 2rem'>dev</Heading>
+            </Center>
+            <SimpleGrid columns={[1, 1, 2]} gap={6}>
+              <Box mt='2rem' w='100%' textAlign='center'>
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 1 }}
+                >
+                    <Link href={`https://blog-sample-rose.vercel.app`} passHref scroll={false}>
+                      <LinkBox cursor="pointer">
+                        <Center>
+                            <Image
+                              h='150px'
+                              src='/blog-sample.png'
+                              borderRadius='10px'
+                            />
+                        </Center>
+                        <LinkOverlay href={`https://blog-sample-rose.vercel.app`}>
+                          <Text mt={2} fontSize={20}>
+                            blog-sample
+                          </Text>
+                        </LinkOverlay>
+                        <Text fontSize={14}>html / css / javascript</Text>
+                      </LinkBox>
+                    </Link>
+                </motion.div>
+              </Box>
+            </SimpleGrid>
         </Box>
         <Box pt='10rem'>
             <Center>
