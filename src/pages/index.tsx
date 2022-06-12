@@ -157,7 +157,7 @@ const Home: NextPage = () => {
                             blog-sample
                           </Text>
                         </LinkOverlay>
-                        <Text fontSize={14}>html / css / javascript</Text>
+                        <Text fontSize={14}>html / css / javascript / microCMS</Text>
                       </LinkBox>
                     </Link>
                 </motion.div>
