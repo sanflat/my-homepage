@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import { Image, useColorModeValue, Box, Heading, Text, HStack, Button, Center, Divider, SimpleGrid, LinkBox,LinkOverlay } from '@chakra-ui/react'
-import { IoLogoGithub, IoLogoInstagram, IoLogoMedium } from 'react-icons/io5'
+import { IoLogoGithub, IoLogoInstagram, IoLogoMedium, IoDocumentOutline} from 'react-icons/io5'
 import { motion } from "framer-motion"
 
 const Home: NextPage = () => {
@@ -102,14 +102,14 @@ const Home: NextPage = () => {
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 1 }}
                     >
-                        <Link href="https://medium.com/@hey9roz">
+                        <Link href="https://note.com/heywoz/">
                             <a>
                                 <Button
                                   h='50px'
                                   w='50px'
                                   borderRadius='30'
                                 >
-                                    <IoLogoMedium/>
+                                    <IoDocumentOutline/>
                                 </Button>
                             </a>
                         </Link>
@@ -158,6 +158,54 @@ const Home: NextPage = () => {
                           </Text>
                         </LinkOverlay>
                         <Text fontSize={14}>html / css / javascript / microCMS</Text>
+                      </LinkBox>
+                    </Link>
+                </motion.div>
+              </Box>
+              <Box mt='2rem' w='100%' textAlign='center'>
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 1 }}
+                >
+                    <Link href={`https://github.com/sanflat/sample-hp-ver1.0`} passHref scroll={false}>
+                      <LinkBox cursor="pointer">
+                        <Center>
+                            <Image
+                              h='150px'
+                              src='/sample-hp-ver1.0.png'
+                              borderRadius='10px'
+                            />
+                        </Center>
+                        <LinkOverlay href={`https://github.com/sanflat/sample-hp-ver1.0`}>
+                          <Text mt={2} fontSize={20}>
+                            hp-sample-ver1.0
+                          </Text>
+                        </LinkOverlay>
+                        <Text fontSize={14}>html / css / javascript</Text>
+                      </LinkBox>
+                    </Link>
+                </motion.div>
+              </Box>
+              <Box mt='2rem' w='100%' textAlign='center'>
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 1 }}
+                >
+                    <Link href={`https://github.com/sanflat/sample-hp-ver2.0`} passHref scroll={false}>
+                      <LinkBox cursor="pointer">
+                        <Center>
+                            <Image
+                              h='150px'
+                              src='/sample-hp-ver2.0.png'
+                              borderRadius='10px'
+                            />
+                        </Center>
+                        <LinkOverlay href={`https://github.com/sanflat/sample-hp-ver2.0`}>
+                          <Text mt={2} fontSize={20}>
+                            hp-sample-ver2.0
+                          </Text>
+                        </LinkOverlay>
+                        <Text fontSize={14}>html / css / jQuery</Text>
                       </LinkBox>
                     </Link>
                 </motion.div>
